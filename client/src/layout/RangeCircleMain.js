@@ -56,7 +56,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 col-xl-4 col-md-4 col-xs-4 col-sm-4  border">
+          <div style={{display:"none"}} className="col-lg-4 col-xl-4 col-md-4 col-xs-4 col-sm-4  border">
             <WindAdjusted />
           </div>
           <div className="col-lg-4 col-xl-4 col-md-4 col-xs-4 col-sm-4  border ">

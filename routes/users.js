@@ -45,25 +45,23 @@ router.post('/checkusername', function (req, res) {
   })
 });
 router.post('/login', function (req, res) {
+  console.log( req.body)
   const { user_name, Password } = req.body;
   var query = { user_name: user_name,Password: Password};
   
   signUp_moduel.findOne(query, function (err, user) {
     if (err) {
       console.error(err);
-      // res.status(500)
-      //   .json({
-      //     res: 'Internal error please try again'
-      //   });
-        console.log("1")
-    } else if (!user) {
-      res.send(JSON.stringify("0", null, 3)); 
-        console.log("2")
-    }
-     else {      
-       res.json(user); 
 
-     // res.send(JSON.stringify(user.Fname + " " + user.LName+"-"+user._id+"-"+user.UserAdmin))
+      res.send("1");
+    } else if (!user) {
+      res.send("1");
+    }
+    else {
+      console.log(user)
+
+      res.json(user);
+      // res.send(JSON.stringify(user.Fname + " " + user.LName+"-"+user._id+"-"+user.UserAdmin))
     }
   })
 })

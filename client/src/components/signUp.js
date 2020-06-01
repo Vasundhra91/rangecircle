@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import homeImage from '../Images/AIRC01.jpg'
-import SigninPage from './Home'
+import SigninPage from './signin'
 import { BrowserRouter as Router, Switch, Route , Redirect} from 'react-router-dom';
 export default class signUp extends Component {
     // constructor(props) {
